@@ -6,9 +6,9 @@
 
 <p>This page is protected and can only be accessed by authenticated users.</p>
 <pre class="code">
-{JSON.stringify($user, null, 2)}
+    {JSON.stringify($user, null, 2)}
 </pre>
 
 <form use:enhance method="post">
-	<input type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" value="Sign out" />
+	<input type="submit" class="button" value="Sign out" />
 </form>
