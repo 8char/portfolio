@@ -7,3 +7,7 @@ Startade git repot, skrev lite på projektplanen & installerade sveltekit som et
 ## 2023-03-27
 
 Gjorde klart Login sidan och började på posts.
+
+## 2023-03-30
+
+Finslipande på projektplan & arbete på prototypen (Figma)
