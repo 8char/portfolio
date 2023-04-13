@@ -11,3 +11,11 @@ Gjorde klart Login sidan och började på posts.
 ## 2023-03-30
 
 Finslipande på projektplan & arbete på prototypen (Figma)
+
+## 2023-04-04
+
+Arbetade på Figma
+
+## 2023-03-13
+
+Arbetade på Figma
