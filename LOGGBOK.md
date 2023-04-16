@@ -19,3 +19,11 @@ Arbetade på Figma
 ## 2023-03-13
 
 Arbetade på Figma
+
+## 2023-03-14
+
+Arbetade på Design Dokumentet
+
+## 2023-03-16
+
+Arbetat på landing page sidan, implementera github workflow som "lintar" projektet & kör prettier, skapade spotify data store

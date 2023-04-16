@@ -1,5 +1,5 @@
-import { auth, githubAuth } from '$lib/server/lucia';
 import { redirect } from '@sveltejs/kit';
+import { auth, githubAuth } from '$lib/server/lucia';
 import type { RequestHandler } from '../$types';
 
 export const GET: RequestHandler = async ({ cookies, url, locals }) => {
