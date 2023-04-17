@@ -5,15 +5,22 @@ import {
     setInterval
 } from 'isomorphic-timers-promises';
 
+const OPCODES = {
+    EVENT: 0,
+    HELLO: 1,
+    INITIALIZE: 2,
+    HEARTBEAT: 3,
+} as const;
+
 type HelloMessage = {
-    op: 1;
+    op: typeof OPCODES.HELLO;
     d: {
         heartbeat_interval: number;
     };
 };
 
 type EventMessageBase<E, T> = {
-    op: 0;
+    op: typeof OPCODES.EVENT;
     t: E;
     d: T;
 };
@@ -57,10 +64,10 @@ class LanyardConnection {
         const data: SocketMessage = JSON.parse(msg.data);
 
         switch (data.op) {
-            case 0:
+            case OPCODES.EVENT:
                 this.handleEvent(data);
                 break;
-            case 1:
+            case OPCODES.HELLO:
                 this.handleHello(data);
                 break;
             default:
@@ -78,7 +85,7 @@ class LanyardConnection {
 
     private sendHeartbeat() {
         const data = JSON.stringify({
-            op: 3,
+            op: OPCODES.HEARTBEAT,
         });
 
         this.socket.send(data);
@@ -86,7 +93,7 @@ class LanyardConnection {
 
     private sendInitialize() {
         const data = JSON.stringify({
-            op: 2,
+            op: OPCODES.INITIALIZE,
             d: {
                 subscribe_to_ids: [import.meta.env.VITE_DISCORD_USER_ID],
             },
