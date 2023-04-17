@@ -33,14 +33,16 @@ type EventMessage = InitializeEvent | PresenceUpdateEvent;
 
 type SocketMessage = HelloMessage | EventMessage;
 
+type LanyardCallBack = (data: LanyardPresenceData) => void
+
 class LanyardConnection {
     private readonly socket: WebSocket;
 
     private heartbeatId?: number;
 
-    private readonly callback: (data: LanyardPresenceData) => void;
+    private readonly callback: LanyardCallBack;
 
-    constructor(callback: (data: LanyardPresenceData) => void) {
+    constructor(callback: LanyardCallBack) {
         this.callback = callback;
 
         this.socket = new WebSocket('wss://api.lanyard.rest/socket');
@@ -111,20 +113,12 @@ class LanyardConnection {
 
 export default function createSpotifyDataStore() {
     const { subscribe, update } = writable<SpotifyData | false | null>(null);
-    let socket: LanyardConnection;
 
-    function start() {
-        socket = new LanyardConnection((d) => {
-            update(() => (d.listening_to_spotify ? d.spotify : false));
-        });
-    }
+    const socket = new LanyardConnection((data) => {
+        update(() => data.listening_to_spotify ? data.spotify : false);
+    });
 
-    function stop() {
-        socket?.close();
-    }
-
-    start();
-    onDestroy(stop);
+    onDestroy(() => socket?.close());
 
     return {
         subscribe
