@@ -1,5 +1,9 @@
 import { onDestroy } from 'svelte';
 import { writable } from 'svelte/store';
+import WebSocket from 'isomorphic-ws';
+import {
+    setInterval
+} from 'isomorphic-timers-promises';
 
 type HelloMessage = {
     op: 1;
@@ -38,7 +42,7 @@ type LanyardCallBack = (data: LanyardPresenceData) => void
 class LanyardConnection {
     private readonly socket: WebSocket;
 
-    private heartbeatId?: number;
+    private heartbeatId?: NodeJS.Timeout;
 
     private readonly callback: LanyardCallBack;
 
@@ -49,7 +53,7 @@ class LanyardConnection {
         this.socket.onmessage = this.onSocketMessage.bind(this);
     }
 
-    private onSocketMessage(msg: MessageEvent) {
+    private onSocketMessage(msg: any) {
         const data: SocketMessage = JSON.parse(msg.data);
 
         switch (data.op) {
@@ -67,7 +71,7 @@ class LanyardConnection {
     private handleHello(data: HelloMessage) {
         this.sendInitialize();
 
-        this.heartbeatId = window.setInterval(() => {
+        this.heartbeatId = setInterval(() => {
             this.sendHeartbeat();
         }, data.d.heartbeat_interval);
     }
@@ -84,7 +88,7 @@ class LanyardConnection {
         const data = JSON.stringify({
             op: 2,
             d: {
-                subscribe_to_ids: [import.meta.env.DISCORD_USER_ID],
+                subscribe_to_ids: [import.meta.env.VITE_DISCORD_USER_ID],
             },
         });
 
@@ -95,7 +99,7 @@ class LanyardConnection {
         let userData: LanyardPresenceData | undefined;
 
         if (data.t === 'INIT_STATE') {
-            userData = data.d[import.meta.env.DISCORD_USER_ID];
+            userData = data.d[import.meta.env.VITE_DISCORD_USER_ID];
         } else if (data.t === 'PRESENCE_UPDATE') {
             userData = data.d;
         }
@@ -107,20 +111,18 @@ class LanyardConnection {
 
     public close() {
         this.socket.close();
-        window.clearInterval(this.heartbeatId);
+        // clearInterval(this.heartbeatId);
     }
 }
 
 export default function createSpotifyDataStore() {
-    const { subscribe, update } = writable<SpotifyData | false | null>(null);
+    const store = writable<SpotifyData | false | null>(null);
 
     const socket = new LanyardConnection((data) => {
-        update(() => data.listening_to_spotify ? data.spotify : false);
+        store.update(() => data.listening_to_spotify ? data.spotify : false);
     });
 
-    onDestroy(() => socket?.close());
+    // onDestroy(() => socket?.close());
 
-    return {
-        subscribe
-    };
+    return store;
 }

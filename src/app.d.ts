@@ -1,3 +1,5 @@
+declare module 'isomorphic-timers-promises';
+
 /// <reference types="lucia-auth" />
 declare namespace Lucia {
 	type Auth = import('$lib/server/lucia.js').Auth;

@@ -2,16 +2,17 @@
 	import createSpotifyDataStore from "$lib/stores/spotifyStore";
 
     let data = createSpotifyDataStore();
+    data.subscribe((val) => console.log(val))
 </script>
 
 
-<div class="relative mt-8 rounded-lg bg-gray-900 border border-primary-300 border-2 border-dashed hover:bg-gray-800 transition group px-6 py-5 shadow-sm flex items-center space-x-3 max-w-lg">
+<div class="relative mt-8 rounded-lg bg-gray-900 border-primary-300 border-2 border-dashed hover:bg-gray-800 transition group px-6 py-5 shadow-sm flex items-center space-x-3 max-w-lg">
     <div class="flex-shrink-0">
-        {#if data === null}
+        {#if $data === null}
             <div
                 class="w-10 h-10 rounded-full bg-gray-700 animate-pulse"
             />
-        {:else if data === false}
+        {:else if $data === false}
             <div
                 class="w-10 h-10 flex items-center justify-center"
             >
@@ -24,13 +25,13 @@
         {:else}
             <img
                 class="h-10 w-10 rounded-full"
-                src={data.album_art_url}
+                src={$data.album_art_url}
                 alt="Album Cover"
             >
         {/if}
     </div>
     <div class="flex-1 min-w-0">
-        {#if data === null}
+        {#if $data === null}
             <div
                 class="space-y-2"
             >
@@ -39,7 +40,7 @@
             </div>
         {:else}
             <a
-                href={data ? `https://open.spotify.com/track/${data.track_id}` : '#'}
+                href={$data ? `https://open.spotify.com/track/${$data.track_id}` : '#'}
                 class="focus:outline-none"
             >
                 <span
@@ -48,9 +49,9 @@
                 />
 
                 <p class="text-sm font-medium text-gray-300 overflow-ellipsis whitespace-nowrap truncate">
-                    {#if data}
+                    {#if $data}
                         <span>
-                            {data.song} &middot; {data.artist}
+                            {$data.song} &middot; {$data.artist}
                         </span>
                     {:else}
                         <span>
@@ -67,7 +68,7 @@
                     /> -->
 
                     <span class="pt-2">
-                        { data ? 'Currently listening' : 'Currently listening to nothing' }
+                        { $data ? 'Currently listening' : 'Currently listening to nothing' }
                     </span>
                 </p>
             </a>

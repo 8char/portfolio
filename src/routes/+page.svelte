@@ -1,6 +1,8 @@
 <script>
 	import Skribbl from "$lib/components/Skribbl.svelte";
-    import BackgroundImage from "$lib/assets/background.png"
+    import BackgroundImage from "$lib/assets/background.jpg"
+
+    import SpotifyPresence from "$lib/components/SpotifyPresence.svelte";
 </script>
 
 <div class="hidden md:block fixed bottom-0 right-0 md:max-w-lg lg:max-w-2xl pointer-events-none">
@@ -29,7 +31,7 @@
         </h2>
 
         <p class="mt-8 text-lg text-gray-300">
-        My name is Matteo Krans Dusic aka Atlas. I'm currently studying Computer Science, however I've been programming for well over 4 years. I'm a freelance developer which specializes in web development, so please don't be afraid to reach out!
+        My name is Matteo Krans Dusic aka Atlas. I'm currently studying Web Development, however I've been programming for well over 4 years. I'm a freelance developer which specializes in web development, so please don't be afraid to reach out!
         </p>
 
         <div class="flex space-x-6 mt-5">
@@ -44,6 +46,6 @@
             </div>
         </div>
 
-        <!-- <SpotifyPresence /> -->
+        <SpotifyPresence />
     </div>
 </div>
