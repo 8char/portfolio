@@ -49,8 +49,6 @@ type LanyardCallBack = (data: LanyardPresenceData) => void
 class LanyardConnection {
     private readonly socket: WebSocket;
 
-    private heartbeatId?: NodeJS.Timeout;
-
     private readonly callback: LanyardCallBack;
 
     constructor(callback: LanyardCallBack) {
@@ -78,7 +76,7 @@ class LanyardConnection {
     private handleHello(data: HelloMessage) {
         this.sendInitialize();
 
-        this.heartbeatId = setInterval(() => {
+        setInterval(() => {
             this.sendHeartbeat();
         }, data.d.heartbeat_interval);
     }
@@ -115,21 +113,15 @@ class LanyardConnection {
 
         this.callback(userData);
     }
-
-    public close() {
-        this.socket.close();
-        // clearInterval(this.heartbeatId);
-    }
 }
 
 export default function createSpotifyDataStore() {
     const store = writable<SpotifyData | false | null>(null);
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const socket = new LanyardConnection((data) => {
         store.update(() => data.listening_to_spotify ? data.spotify : false);
     });
-
-    // onDestroy(() => socket?.close());
 
     return store;
 }
