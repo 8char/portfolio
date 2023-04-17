@@ -42,6 +42,7 @@
 		"@lucia-auth/sveltekit": "^0.6.11",
 		"@poppanator/sveltekit-svg": "^3.0.0",
 		"@prisma/client": "^4.11.0",
+		"@sveltejs/adapter-vercel": "^2.4.1",
 		"autoprefixer": "^10.4.14",
 		"dotenv": "^16.0.3",
 		"front-matter": "^4.0.2",
