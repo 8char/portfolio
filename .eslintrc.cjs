@@ -6,9 +6,6 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'prettier'
     ],
-    rules: {
-        "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": true}]
-    },
 	plugins: ['svelte3', '@typescript-eslint'],
 	ignorePatterns: ['*.cjs'],
 	overrides: [{ files: ['*.svelte'], processor: 'svelte3/svelte3' }],
