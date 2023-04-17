@@ -1,4 +1,8 @@
 declare module 'isomorphic-timers-promises';
+declare module "*.svg" {
+	const content: any;
+	export default content;
+}
 
 /// <reference types="lucia-auth" />
 declare namespace Lucia {

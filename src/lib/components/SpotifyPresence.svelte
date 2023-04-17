@@ -1,8 +1,10 @@
 <script setup lang="ts">
 	import createSpotifyDataStore from "$lib/stores/spotifyStore";
+    import { faSpotify } from "@fortawesome/free-brands-svg-icons";
+    import FontAwesomeIcon from "svelte-fa/src/fa.svelte";
+	import MusicSlash from "$lib/components/svgs/MusicSlash.svelte";
 
     let data = createSpotifyDataStore();
-    data.subscribe((val) => console.log(val))
 </script>
 
 
@@ -16,11 +18,7 @@
             <div
                 class="w-10 h-10 flex items-center justify-center"
             >
-                <!-- <FontAwesomeIcon
-                    class="text-gray-300"
-                    size="sm"
-                    icon="faMusicSlash"
-                /> -->
+                <MusicSlash />
             </div>
         {:else}
             <img
@@ -61,11 +59,11 @@
                 </p>
 
                 <p class="text-sm text-gray-500 truncate">
-                    <!-- <FontAwesomeIcon
-                        :icon="faSpotify"
+                    <FontAwesomeIcon
+                        icon={faSpotify}
                         size="lg"
-                        class="mr-1"
-                    /> -->
+                        class="mr-1 inline-block"
+                    />
 
                     <span class="pt-2">
                         { $data ? 'Currently listening' : 'Currently listening to nothing' }

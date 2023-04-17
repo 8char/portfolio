@@ -1,4 +1,8 @@
-<svg fill="currentColor" version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<script lang="ts">
+    export let classes: string;
+</script>
+
+<svg class={classes} fill="currentColor" version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <mask id="cut-ts-text">
             <rect width="512" height="512" x="0" y="0" fill="currentColor"/>
