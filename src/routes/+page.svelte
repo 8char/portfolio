@@ -7,7 +7,8 @@
     import CSharpLogo from "$lib/components/svgs/CSharp.svelte"
     import LuaLogo from '$lib/components/svgs/Lua.svelte';
     import TypeScriptLogo from '$lib/components/svgs/TypeScript.svelte';
-    import SvelteLogo from "$lib/components/svgs/Svelte.svelte"
+    import SvelteLogo from "$lib/components/svgs/Svelte.svelte";
+    import NodeJS from "$lib/components/svgs/NodeJS.svelte";
 
     type SkillName = string;
 
@@ -18,6 +19,7 @@
 
     const skills: Skill[] = [
         { name: 'SvelteKit', icon: SvelteLogo },
+        { name: 'NodeJS', icon: NodeJS },
         { name: 'TypeScript', icon: TypeScriptLogo },
         { name: 'C#', icon: CSharpLogo },
         { name: 'Lua', icon: LuaLogo },
@@ -48,7 +50,7 @@
         </h2>
 
         <p class="mt-8 text-lg text-gray-300">
-            My name is Matteo Krans Dusic aka Atlas. I'm currently studying Web Development, however I've been programming for well over 4 years. I'm a freelance developer who specializes in web development, so please don't be afraid to reach out!
+            My name is Matteo Krans Dusic aka Atlas. I'm currently studying Web Development, however I've been programming for well over 5 years. I'm a freelance developer who specializes in web development, so please don't be afraid to reach out!
         </p>
 
         <div class="flex space-x-6 mt-5">

@@ -16,14 +16,18 @@ Finslipande på projektplan & arbete på prototypen (Figma)
 
 Arbetade på Figma
 
-## 2023-03-13
+## 2023-04-13
 
 Arbetade på Figma
 
-## 2023-03-14
+## 2023-04-14
 
 Arbetade på Design Dokumentet
 
-## 2023-03-16
+## 2023-04-16
 
 Arbetat på landing page sidan, implementera github workflow som "lintar" projektet & kör prettier, skapade spotify data store
+
+## 2023-04-17
+
+Arbetade med a fixa till "spotify data store" och generellt sett fixade till lite saker
