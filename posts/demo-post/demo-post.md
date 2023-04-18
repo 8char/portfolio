@@ -44,7 +44,7 @@ _You **can** combine them_
 
 ## Images
 
-{% img src="some-image.png" alt="Testing Image" %}
+{% img src="some-image.jpg" alt="Testing Image" %}
 
 ## Links
 
