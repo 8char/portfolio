@@ -39,12 +39,12 @@ _You **can** combine them_
 1. Item 1
 1. Item 2
 1. Item 3
-  1. Item 3a
-  1. Item 3b
+    1. Item 3a
+    2. Item 3b
 
 ## Images
 
-![This is a alt text.](/image/sample.png "This is a sample image.")
+{% img src="some-image.png" alt="Testing Image" %}
 
 ## Links
 
