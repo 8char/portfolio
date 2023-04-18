@@ -1,4 +1,3 @@
-import { onDestroy } from 'svelte';
 import { writable } from 'svelte/store';
 import WebSocket from 'isomorphic-ws';
 import {
