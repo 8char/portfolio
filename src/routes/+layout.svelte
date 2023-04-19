@@ -4,10 +4,13 @@
 
 <script>
     import "../app.css";
+
+    import Logo from "$lib/assets/logo.png";
 </script>
 
 <div class="relative min-h-screen bg-gray-900">
-    <div class="sticky top-0 z-50 max-w-5xl mx-auto flex justify-end items-center py-5 sm:py-8 px-4 md:px-0 md:justify-start">
+    <div class="sticky top-0 z-50 max-w-5xl mx-auto flex items-center py-5 sm:py-8 px-4 md:px-0 justify-between">
+        <img src={Logo} alt="Atlas's Logo" class="h-8 w-8 ml-8" />
         <div class="md:hidden">
             <button
                 type="button"
