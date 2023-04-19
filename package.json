@@ -65,6 +65,7 @@
 		"remark-slug": "^7.0.1",
 		"remark-smartypants": "^2.0.0",
 		"remark-toc": "^8.0.1",
+		"sass": "^1.62.0",
 		"svelte-fa": "^3.0.3",
 		"tailwindcss": "^3.2.7",
 		"timers": "^0.1.1",

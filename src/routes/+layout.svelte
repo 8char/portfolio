@@ -3,7 +3,7 @@
 </svelte:head>
 
 <script>
-    import "../app.css";
+    import "$lib/styles/styles.scss";
 
     import Logo from "$lib/assets/logo-fit.png";
 </script>
