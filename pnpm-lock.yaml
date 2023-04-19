@@ -5,22 +5,22 @@ dependencies:
     specifier: ^6.4.0
     version: 6.4.0
   '@lucia-auth/adapter-prisma':
-    specifier: ^0.6.1
-    version: 0.6.1(lucia-auth@0.10.0)
+    specifier: ^1.0.0
+    version: 1.0.0(lucia-auth@1.2.2)
   '@lucia-auth/oauth':
-    specifier: ^0.7.2
-    version: 0.7.3(lucia-auth@0.10.0)
+    specifier: ^1.0.0
+    version: 1.0.0(lucia-auth@1.2.2)
   '@lucia-auth/sveltekit':
     specifier: ^0.6.11
-    version: 0.6.11(lucia-auth@0.10.0)(svelte@3.58.0)
+    version: 0.6.11(lucia-auth@1.2.2)(svelte@3.58.0)
   '@poppanator/sveltekit-svg':
     specifier: ^3.0.0
     version: 3.0.0(svelte@3.58.0)(vite@4.2.2)
   '@prisma/client':
-    specifier: ^4.11.0
+    specifier: ^4.13.0
     version: 4.13.0(prisma@4.13.0)
   '@sveltejs/adapter-vercel':
-    specifier: ^2.4.1
+    specifier: ^2.4.2
     version: 2.4.2(@sveltejs/kit@1.15.7)
   '@types/hast':
     specifier: ^2.3.4
@@ -44,13 +44,13 @@ dependencies:
     specifier: ^5.0.0
     version: 5.0.0(ws@8.13.0)
   lucia-auth:
-    specifier: ^0.10.0
-    version: 0.10.0
+    specifier: ^1.2.2
+    version: 1.2.2
   postcss:
-    specifier: ^8.4.21
+    specifier: ^8.4.22
     version: 8.4.22
   prisma:
-    specifier: ^4.11.0
+    specifier: ^4.13.0
     version: 4.13.0
   rehype:
     specifier: ^12.0.1
@@ -95,7 +95,7 @@ dependencies:
     specifier: ^3.0.3
     version: 3.0.3
   tailwindcss:
-    specifier: ^3.2.7
+    specifier: ^3.3.1
     version: 3.3.1(postcss@8.4.22)
   timers:
     specifier: ^0.1.1
@@ -115,19 +115,19 @@ devDependencies:
     specifier: ^2.0.0
     version: 2.0.0(@sveltejs/kit@1.15.7)
   '@sveltejs/kit':
-    specifier: ^1.14.0
+    specifier: ^1.15.7
     version: 1.15.7(svelte@3.58.0)(vite@4.2.2)
   '@types/ws':
     specifier: ^8.5.4
     version: 8.5.4
   '@typescript-eslint/eslint-plugin':
-    specifier: ^5.56.0
-    version: 5.59.0(@typescript-eslint/parser@5.59.0)(eslint@8.38.0)(typescript@4.9.5)
+    specifier: ^5.59.0
+    version: 5.59.0(@typescript-eslint/parser@5.59.0)(eslint@8.38.0)(typescript@5.0.4)
   '@typescript-eslint/parser':
-    specifier: ^5.56.0
-    version: 5.59.0(eslint@8.38.0)(typescript@4.9.5)
+    specifier: ^5.59.0
+    version: 5.59.0(eslint@8.38.0)(typescript@5.0.4)
   eslint:
-    specifier: ^8.2.0
+    specifier: ^8.38.0
     version: 8.38.0
   eslint-config-airbnb:
     specifier: ^19.0.4
@@ -139,16 +139,16 @@ devDependencies:
     specifier: ^8.8.0
     version: 8.8.0(eslint@8.38.0)
   eslint-plugin-import:
-    specifier: ^2.25.3
+    specifier: ^2.27.5
     version: 2.27.5(@typescript-eslint/parser@5.59.0)(eslint@8.38.0)
   eslint-plugin-jsx-a11y:
-    specifier: ^6.5.1
+    specifier: ^6.7.1
     version: 6.7.1(eslint@8.38.0)
   eslint-plugin-react:
-    specifier: ^7.28.0
+    specifier: ^7.32.2
     version: 7.32.2(eslint@8.38.0)
   eslint-plugin-react-hooks:
-    specifier: ^4.3.0
+    specifier: ^4.6.0
     version: 4.6.0(eslint@8.38.0)
   eslint-plugin-svelte3:
     specifier: ^4.0.0
@@ -160,19 +160,19 @@ devDependencies:
     specifier: ^2.10.0
     version: 2.10.0(prettier@2.8.7)(svelte@3.58.0)
   svelte:
-    specifier: ^3.57.0
+    specifier: ^3.58.0
     version: 3.58.0
   svelte-check:
-    specifier: ^3.1.4
+    specifier: ^3.2.0
     version: 3.2.0(postcss@8.4.22)(sass@1.62.0)(svelte@3.58.0)
   tslib:
     specifier: ^2.5.0
     version: 2.5.0
   typescript:
-    specifier: ^4.9.5
-    version: 4.9.5
+    specifier: ^5.0.4
+    version: 5.0.4
   vite:
-    specifier: ^4.2.1
+    specifier: ^4.2.2
     version: 4.2.2(sass@1.62.0)
 
 packages:
@@ -659,30 +659,30 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
 
-  /@lucia-auth/adapter-prisma@0.6.1(lucia-auth@0.10.0):
-    resolution: {integrity: sha512-I2XGBgeL6QnxXP+hVvP7h6qAPR8wfKNlWw2kzADwoyw9qpjnLbWdn3FJgwWafWsJopfylIz+n9eT6uBL4bqL8Q==}
+  /@lucia-auth/adapter-prisma@1.0.0(lucia-auth@1.2.2):
+    resolution: {integrity: sha512-ThJuXKHJS6GQ/JcTe3BXgM6Fip5klQ9lSOQBL2zMpxZwUZQGNWXEigRX9ah8AfFQxbgEG0WcdXhbXWeHsRS3yw==}
     peerDependencies:
-      lucia-auth: 0.9.x - 0.10.x
+      lucia-auth: 1.x
     dependencies:
-      lucia-auth: 0.10.0
+      lucia-auth: 1.2.2
     dev: false
 
-  /@lucia-auth/oauth@0.7.3(lucia-auth@0.10.0):
-    resolution: {integrity: sha512-rs4r/4/2SSZuQx3934McEcFF55DYLcje0Atq1+SmSXmhgP+U9WIUgXx8lXsHJ23MBtlJhf0WMJ/JAlnvzPuoKA==}
+  /@lucia-auth/oauth@1.0.0(lucia-auth@1.2.2):
+    resolution: {integrity: sha512-2X3wS4+CEEuYc6R4wCMmcUM0aYltuoQwORlauG35PzygIg9tc+Bv4pXsJ8t6Sbvo47gUBGYhZbMaggk5A9BUWA==}
     peerDependencies:
-      lucia-auth: 0.9.x - 0.10.x
+      lucia-auth: 1.x
     dependencies:
-      lucia-auth: 0.10.0
+      lucia-auth: 1.2.2
     dev: false
 
-  /@lucia-auth/sveltekit@0.6.11(lucia-auth@0.10.0)(svelte@3.58.0):
+  /@lucia-auth/sveltekit@0.6.11(lucia-auth@1.2.2)(svelte@3.58.0):
     resolution: {integrity: sha512-VRYOVnxyL0Iemgp7PZZ/f9nbzS7+gEwl3k/5p03wOIFWdD2BY5CiBjVqMvHXLf6ZxqZzPzYebHCL6WSFvfdxmA==}
     peerDependencies:
       lucia-auth: 0.5.x - 0.10.x
       svelte: 3.x
     dependencies:
       '@noble/hashes': 1.3.0
-      lucia-auth: 0.10.0
+      lucia-auth: 1.2.2
       svelte: 3.58.0
     dev: false
 
@@ -916,7 +916,7 @@ packages:
       '@types/node': 18.15.11
     dev: true
 
-  /@typescript-eslint/eslint-plugin@5.59.0(@typescript-eslint/parser@5.59.0)(eslint@8.38.0)(typescript@4.9.5):
+  /@typescript-eslint/eslint-plugin@5.59.0(@typescript-eslint/parser@5.59.0)(eslint@8.38.0)(typescript@5.0.4):
     resolution: {integrity: sha512-p0QgrEyrxAWBecR56gyn3wkG15TJdI//eetInP3zYRewDh0XS+DhB3VUAd3QqvziFsfaQIoIuZMxZRB7vXYaYw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -928,23 +928,23 @@ packages:
         optional: true
     dependencies:
       '@eslint-community/regexpp': 4.5.0
-      '@typescript-eslint/parser': 5.59.0(eslint@8.38.0)(typescript@4.9.5)
+      '@typescript-eslint/parser': 5.59.0(eslint@8.38.0)(typescript@5.0.4)
       '@typescript-eslint/scope-manager': 5.59.0
-      '@typescript-eslint/type-utils': 5.59.0(eslint@8.38.0)(typescript@4.9.5)
-      '@typescript-eslint/utils': 5.59.0(eslint@8.38.0)(typescript@4.9.5)
+      '@typescript-eslint/type-utils': 5.59.0(eslint@8.38.0)(typescript@5.0.4)
+      '@typescript-eslint/utils': 5.59.0(eslint@8.38.0)(typescript@5.0.4)
       debug: 4.3.4
       eslint: 8.38.0
       grapheme-splitter: 1.0.4
       ignore: 5.2.4
       natural-compare-lite: 1.4.0
       semver: 7.5.0
-      tsutils: 3.21.0(typescript@4.9.5)
-      typescript: 4.9.5
+      tsutils: 3.21.0(typescript@5.0.4)
+      typescript: 5.0.4
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/parser@5.59.0(eslint@8.38.0)(typescript@4.9.5):
+  /@typescript-eslint/parser@5.59.0(eslint@8.38.0)(typescript@5.0.4):
     resolution: {integrity: sha512-qK9TZ70eJtjojSUMrrEwA9ZDQ4N0e/AuoOIgXuNBorXYcBDk397D2r5MIe1B3cok/oCtdNC5j+lUUpVB+Dpb+w==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -956,10 +956,10 @@ packages:
     dependencies:
       '@typescript-eslint/scope-manager': 5.59.0
       '@typescript-eslint/types': 5.59.0
-      '@typescript-eslint/typescript-estree': 5.59.0(typescript@4.9.5)
+      '@typescript-eslint/typescript-estree': 5.59.0(typescript@5.0.4)
       debug: 4.3.4
       eslint: 8.38.0
-      typescript: 4.9.5
+      typescript: 5.0.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -972,7 +972,7 @@ packages:
       '@typescript-eslint/visitor-keys': 5.59.0
     dev: true
 
-  /@typescript-eslint/type-utils@5.59.0(eslint@8.38.0)(typescript@4.9.5):
+  /@typescript-eslint/type-utils@5.59.0(eslint@8.38.0)(typescript@5.0.4):
     resolution: {integrity: sha512-d/B6VSWnZwu70kcKQSCqjcXpVH+7ABKH8P1KNn4K7j5PXXuycZTPXF44Nui0TEm6rbWGi8kc78xRgOC4n7xFgA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -982,12 +982,12 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/typescript-estree': 5.59.0(typescript@4.9.5)
-      '@typescript-eslint/utils': 5.59.0(eslint@8.38.0)(typescript@4.9.5)
+      '@typescript-eslint/typescript-estree': 5.59.0(typescript@5.0.4)
+      '@typescript-eslint/utils': 5.59.0(eslint@8.38.0)(typescript@5.0.4)
       debug: 4.3.4
       eslint: 8.38.0
-      tsutils: 3.21.0(typescript@4.9.5)
-      typescript: 4.9.5
+      tsutils: 3.21.0(typescript@5.0.4)
+      typescript: 5.0.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -997,7 +997,7 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@typescript-eslint/typescript-estree@5.59.0(typescript@4.9.5):
+  /@typescript-eslint/typescript-estree@5.59.0(typescript@5.0.4):
     resolution: {integrity: sha512-sUNnktjmI8DyGzPdZ8dRwW741zopGxltGs/SAPgGL/AAgDpiLsCFLcMNSpbfXfmnNeHmK9h3wGmCkGRGAoUZAg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -1012,13 +1012,13 @@ packages:
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.5.0
-      tsutils: 3.21.0(typescript@4.9.5)
-      typescript: 4.9.5
+      tsutils: 3.21.0(typescript@5.0.4)
+      typescript: 5.0.4
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/utils@5.59.0(eslint@8.38.0)(typescript@4.9.5):
+  /@typescript-eslint/utils@5.59.0(eslint@8.38.0)(typescript@5.0.4):
     resolution: {integrity: sha512-GGLFd+86drlHSvPgN/el6dRQNYYGOvRSDVydsUaQluwIW3HvbXuxyuD5JETvBt/9qGYe+lOrDk6gRrWOHb/FvA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -1029,7 +1029,7 @@ packages:
       '@types/semver': 7.3.13
       '@typescript-eslint/scope-manager': 5.59.0
       '@typescript-eslint/types': 5.59.0
-      '@typescript-eslint/typescript-estree': 5.59.0(typescript@4.9.5)
+      '@typescript-eslint/typescript-estree': 5.59.0(typescript@5.0.4)
       eslint: 8.38.0
       eslint-scope: 5.1.1
       semver: 7.5.0
@@ -1519,7 +1519,7 @@ packages:
       object-is: 1.1.5
       object-keys: 1.1.1
       object.assign: 4.1.4
-      regexp.prototype.flags: 1.4.3
+      regexp.prototype.flags: 1.5.0
       side-channel: 1.0.4
       which-boxed-primitive: 1.0.2
       which-collection: 1.0.1
@@ -1677,7 +1677,7 @@ packages:
       object-inspect: 1.12.3
       object-keys: 1.1.1
       object.assign: 4.1.4
-      regexp.prototype.flags: 1.4.3
+      regexp.prototype.flags: 1.5.0
       safe-regex-test: 1.0.0
       string.prototype.trim: 1.2.7
       string.prototype.trimend: 1.0.6
@@ -1878,7 +1878,7 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 5.59.0(eslint@8.38.0)(typescript@4.9.5)
+      '@typescript-eslint/parser': 5.59.0(eslint@8.38.0)(typescript@5.0.4)
       debug: 3.2.7
       eslint: 8.38.0
       eslint-import-resolver-node: 0.3.7
@@ -1896,7 +1896,7 @@ packages:
       '@typescript-eslint/parser':
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 5.59.0(eslint@8.38.0)(typescript@4.9.5)
+      '@typescript-eslint/parser': 5.59.0(eslint@8.38.0)(typescript@5.0.4)
       array-includes: 3.1.6
       array.prototype.flat: 1.3.1
       array.prototype.flatmap: 1.3.1
@@ -2868,11 +2868,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /lucia-auth@0.10.0:
-    resolution: {integrity: sha512-lH6vVbquC4rQovufb31SIuzBhqKoDjZFw+h7ce7TfoqOc6xKMNOG7HBepiWwCLoXjFemMTAq92vTeK5HFx9qDg==}
-    dependencies:
-      '@noble/hashes': 1.3.0
-      nanoid: 4.0.2
+  /lucia-auth@1.2.2:
+    resolution: {integrity: sha512-b4hF/WP6UBkxCcTQEyr1vsIGM22Cp9WAPRoTZNbt2MSjp9VONQZWWo77tiVV9uWMTcoBTaIcWf1KggxH8HaxdA==}
     dev: false
 
   /magic-string@0.27.0:
@@ -3390,12 +3387,6 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  /nanoid@4.0.2:
-    resolution: {integrity: sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==}
-    engines: {node: ^14 || ^16 || >=18}
-    hasBin: true
-    dev: false
-
   /natural-compare-lite@1.4.0:
     resolution: {integrity: sha512-Tj+HTDSJJKaZnfiuw+iaF9skdPpTo2GtEly5JHnWV/hfv2Qj/9RKsGISQtLh2ox3l5EAGw487hnBee0sIJ6v2g==}
     dev: true
@@ -3801,8 +3792,8 @@ packages:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
     dev: true
 
-  /regexp.prototype.flags@1.4.3:
-    resolution: {integrity: sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA==}
+  /regexp.prototype.flags@1.5.0:
+    resolution: {integrity: sha512-0SutC3pNudRKgquxGoRGIz946MZVHqbNfPjBdxeOhBrdgDKlRoXmYLQN9xRbrR09ZXWeGAdPuif7egofn6v5LA==}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.2
@@ -4173,7 +4164,7 @@ packages:
       get-intrinsic: 1.2.0
       has-symbols: 1.0.3
       internal-slot: 1.0.5
-      regexp.prototype.flags: 1.4.3
+      regexp.prototype.flags: 1.5.0
       side-channel: 1.0.4
     dev: true
 
@@ -4490,14 +4481,14 @@ packages:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
     dev: true
 
-  /tsutils@3.21.0(typescript@4.9.5):
+  /tsutils@3.21.0(typescript@5.0.4):
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
     engines: {node: '>= 6'}
     peerDependencies:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
     dependencies:
       tslib: 1.14.1
-      typescript: 4.9.5
+      typescript: 5.0.4
     dev: true
 
   /type-check@0.4.0:
@@ -4518,12 +4509,6 @@ packages:
       call-bind: 1.0.2
       for-each: 0.3.3
       is-typed-array: 1.1.10
-    dev: true
-
-  /typescript@4.9.5:
-    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
-    engines: {node: '>=4.2.0'}
-    hasBin: true
     dev: true
 
   /typescript@5.0.4:
