@@ -19,7 +19,7 @@
 				</span>
 			</div>
 
-			<a href="/posts/demo-post" class="block mt-2">
+			<a href="/projects/demo-post" class="block mt-2">
 				<p class="text-xl font-bold text-white">The Project Name</p>
 				<p class="mt-2 text-sm text-gray-300">
 					Not really done with this yet, this only serves as a placeholder for now... Not really
