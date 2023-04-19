@@ -66,7 +66,7 @@ You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
 
 ## Blocks of code
 
-```js
+```js:test.js showLineNumbers
 let message = 'Hello world';
 alert(message);
 ```
