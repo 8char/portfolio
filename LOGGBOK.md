@@ -34,4 +34,4 @@ Arbetade med a fixa till "spotify data store" och generellt sett fixade till lit
 
 ## 2023-04-18
 
-Arbetade på projekt viewen och api:n för dem så att jag kan implementera en mer komplett lösning senare
+Arbetade på projekt viewen och api:n för dem så att jag kan implementera en mer komplett lösning senare och error handling
