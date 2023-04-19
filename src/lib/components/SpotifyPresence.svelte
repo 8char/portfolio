@@ -8,7 +8,7 @@
 </script>
 
 
-<div class="relative mt-8 rounded-lg bg-gray-900/5 backdrop-blur-xl ring-1 hover:bg-gray-800/50 hover:ring-lime-500/50 transition group px-6 py-5 shadow-xl flex items-center space-x-3 max-w-lg">
+<div class="relative mt-8 rounded-lg bg-gray-900/40 backdrop-blur-xl ring-1 hover:bg-gray-800/50 hover:ring-lime-500/50 transition group px-6 py-5 shadow-xl flex items-center space-x-3 max-w-lg">
     <div class="flex-shrink-0">
         {#if $data === null}
             <div

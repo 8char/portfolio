@@ -28,7 +28,7 @@
 	</div>
     <div class="sticky top-2 z-50 text-center mx-2">
         <div
-            class="max-w-5xl mx-auto px-4 flex items-center py-5 justify-between rounded-xl ring-1 ring-primary-500/50 backdrop-blur-xl bg-gray-900/50 shadow-xl gap-8 md:p-6"
+            class="max-w-5xl mx-auto px-4 flex items-center py-5 justify-between rounded-xl ring-1 ring-primary-500/50 backdrop-blur-xl bg-gray-900/30 shadow-xl gap-8 md:p-6"
         >
             <img src={Logo} alt="Atlas's Logo" class="h-6" />
             <div class="md:hidden">
@@ -175,5 +175,7 @@
         {/if}
     </div>
 
-	<slot />
+    <div class="relative">
+        <slot />
+    </div>
 </div>
