@@ -5,7 +5,7 @@
 <script>
     import "../app.css";
 
-    import Logo from "$lib/assets/logo.png";
+    import Logo from "$lib/assets/logo-fit.png";
 </script>
 
 <div class="relative min-h-screen bg-gray-900">
