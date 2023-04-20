@@ -175,7 +175,7 @@
         {/if}
     </div>
 
-    <div class="relative">
+    <div class="relative mt-6">
         <slot />
     </div>
 </div>

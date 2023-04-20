@@ -23,9 +23,8 @@ This adapter will be installed by default when you use [`adapter-auto`](adapter-
 
 Install with `npm i -D @sveltejs/adapter-cloudflare`, then add the adapter to your `svelte.config.js`:
 
-```js
+```js:svelte.config.js showLineNumbers
 // @errors: 2307
-/// file: svelte.config.js
 import adapter from '@sveltejs/adapter-cloudflare';
 
 export default {
@@ -72,7 +71,7 @@ When configuring your project settings, you must use the following settings:
 
 The [`env`](https://developers.cloudflare.com/workers/runtime-apis/fetch-event#parameters) object, containing KV/DO namespaces etc, is passed to SvelteKit via the `platform` property along with `context` and `caches`, meaning you can access it in hooks and endpoints:
 
-```js
+```js:index.js showLineNumbers
 // @errors: 7031
 export async function POST({ request, platform }) {
 	const x = platform.env.YOUR_DURABLE_OBJECT_NAMESPACE.idFromName('x');
@@ -81,8 +80,7 @@ export async function POST({ request, platform }) {
 
 To make these types available to your app, reference them in your `src/app.d.ts`:
 
-```diff
-/// file: src/app.d.ts
+```diff:src/app.d.ts showLineNumbers
 declare global {
 	namespace App {
 		interface Platform {
