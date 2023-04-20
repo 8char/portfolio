@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Skribbl from '$lib/components/svgs/Skribbl.svelte';
-	import BackgroundImage from '$lib/assets/background.jpg';
 
 	import SpotifyPresence from '$lib/components/SpotifyPresence.svelte';
 
@@ -25,19 +24,6 @@
 		{ name: 'Lua', icon: LuaLogo }
 	];
 </script>
-
-<div class="hidden lg:block fixed bottom-0 right-0 md:max-w-lg lg:max-w-2xl pointer-events-none">
-	<svg
-		class="hidden lg:block absolute top-0 left-0 h-full w-full text-gray-900"
-		fill="currentColor"
-		viewBox="0 0 100 100"
-		preserveAspectRatio="none"
-	>
-		<polygon points="0,0 0,100 100,0" />
-	</svg>
-
-	<img src={BackgroundImage} class="w-full" alt="Background" />
-</div>
 
 <div class="relative h-full max-w-5xl mx-auto px-4 py-8 md:px-0">
 	<div class="max-w-2xl py-16 sm:py-40 md:mx-auto">
