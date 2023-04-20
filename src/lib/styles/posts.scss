@@ -1,5 +1,5 @@
 .prose h1 {
-    @apply mx-16 text-primary-500 text-6xl text-center font-bold drop-shadow-2xl;
+    @apply mx-16 text-primary-500 text-6xl text-center font-bold drop-shadow-2xl mt-16 mb-6;
 }
 
 .prose h2 {
@@ -139,4 +139,8 @@ table {
 	.prose h1 {
 		margin: var(--spacing-128) 0;
 	}
+}
+
+.prose {
+    @apply mx-4;
 }

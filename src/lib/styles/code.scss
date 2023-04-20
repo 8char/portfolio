@@ -5,7 +5,7 @@
 }
 
 .prose pre {
-    @apply px-8 leading-8 bg-gray-900 border border-t-0 border-primary-500 rounded-b-3xl shadow-sm whitespace-pre-wrap mx-4;
+    @apply px-8 leading-8 bg-gray-900 border border-t-0 border-primary-500 rounded-b-3xl shadow-sm whitespace-pre-wrap;
 }
 
 .prose pre .code-line {
@@ -35,7 +35,7 @@
 }
 
 .prose .rehype-code-title {
-    @apply flex justify-between pt-4 pr-6 pb-0 pl-6 text-white bg-gray-900 border border-b-0 border-primary-500 rounded-t-2xl z-10 mx-4;
+    @apply flex justify-between pt-4 pr-6 pb-0 pl-6 text-white bg-gray-900 border border-b-0 border-primary-500 rounded-t-2xl z-10;
 }
 
 .prose .line-number::before {
