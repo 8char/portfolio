@@ -3,6 +3,10 @@
 
 	import Logo from '$lib/assets/logo-fit.png';
     import mountainsImage from '$lib/assets/mountains.jpg';
+    import Dropdown from '$lib/components/Dropdown.svelte';
+    import DropdownItem from '$lib/components/DropdownItem.svelte';
+
+    import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 </script>
 
 <svelte:head>
@@ -67,46 +71,21 @@
                         Projects
                     </a>
     
-                    <!-- <Dropdown>
-                    <template #trigger="{ toggle }">
-                        <button
-                        class="text-gray-300 hover:text-white group inline-flex items-center text-sm font-medium py-2 focus:outline-none"
-                        @click="toggle"
+                    <Dropdown>      
+                        <DropdownItem
+                            href="https://github.com/8char"
+                            icon={faGithub}
                         >
-                        <span>Socials</span>
-    
-                        <svg
-                            class="text-gray-400 ml-2 h-5 w-5 group-hover:text-white"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
+                            Github
+                        </DropdownItem>
+        
+                        <DropdownItem
+                            href="https://linkedin.com/in/matteo-krans-dusic-337ba31b6/"
+                            icon={faLinkedin}
                         >
-                            <path
-                            fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"
-                            />
-                        </svg>
-                        </button>
-                    </template>
-    
-                    <DropdownItem
-                        href="https://github.com/8char"
-                        target="_blank"
-                        :icon="faGithub"
-                    >
-                        Github
-                    </DropdownItem>
-    
-                    <DropdownItem
-                        href="https://linkedin.com/in/matteo-krans-dusic-337ba31b6/"
-                        target="_blank"
-                        :icon="faLinkedIn"
-                    >
-                        Linked In
-                    </DropdownItem>
-                    </Dropdown> -->
+                            Linked In
+                        </DropdownItem>
+                    </Dropdown>
                 </nav>
 
                 <button class="ring-1 rounded-xl px-3 p-1 text-gray-300 hover:text-white hover:bg-primary-500/10 transition ml-auto">

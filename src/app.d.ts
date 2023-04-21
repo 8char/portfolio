@@ -1,7 +1,6 @@
 declare module 'isomorphic-timers-promises';
-declare module "*.svg" {
-	const content: any;
-	export default content;
+declare namespace FontAwesome {
+	type IconDefinition = import('@fortawesome/free-brands-svg-icons').IconDefinition;
 }
 
 /// <reference types="lucia-auth" />
