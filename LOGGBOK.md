@@ -39,3 +39,11 @@ Arbetade på projekt viewen och api:n för dem så att jag kan implementera en m
 ## 2023-04-19
 
 Allmänt arbetat på hemsidan.
+
+## 2023-04-20
+
+Fixat till SCSS:en för uppläggen/projekten
+
+## 2023-04-21
+
+Laggt till en socials dropdown
