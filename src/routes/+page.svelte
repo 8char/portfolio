@@ -26,7 +26,7 @@
 </script>
 
 <div class="h-full max-w-5xl mx-auto px-4 py-4 md:px-0">
-	<div class="max-w-2xl py-16 sm:py-40 md:mx-auto">
+	<div class="max-w-2xl py-16 md:py-8 sm:py-40 md:mx-auto">
 		<h2 class="text-4xl w-min font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
 			Atlas
 			<Skribbl />
