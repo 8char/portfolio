@@ -1,13 +1,21 @@
 <script lang="ts">
     import { dropdown } from "$lib/stores/dropdownStore";
     import { blurOnEscape } from "$lib/directives/blurOnEscape";
+
+    function handleBlur(event: FocusEvent) {
+        // Checks to make sure that the element that we are clicking, is not one that is within the dropdown div
+        const menu = document.querySelector<HTMLElement>('.dropdown');
+        if (menu?.contains(event.relatedTarget as Node)) return;
+
+        dropdown.set(false);
+    }
 </script>
     
 <div class="relative z-10">
     <button
         class="text-gray-300 hover:text-white group inline-flex items-center text-sm font-medium py-2 focus:outline-none"
         on:click={() => dropdown.set(!$dropdown)}
-        on:blur={() => dropdown.set(false)}
+        on:blur={handleBlur}
         use:blurOnEscape
     >
         <span>Socials</span>
@@ -29,7 +37,7 @@
 
     {#if $dropdown}
          <div
-             class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-gray-800"
+             class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-gray-800 dropdown"
              role="menu"
              tabindex="-1"
          >
