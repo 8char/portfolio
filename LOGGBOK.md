@@ -50,4 +50,4 @@ Laggt till en socials dropdown
 
 ## 2023-04-24
 
-Arbetade med CI & förbättringar till ldropdown menyn.
+Arbetade med CI & förbättringar till dropdown menyn.
