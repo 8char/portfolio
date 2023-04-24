@@ -1,5 +1,6 @@
 <script lang="ts">
     import { dropdown } from "$lib/stores/dropdownStore";
+    import { blurOnEscape } from "$lib/directives/blurOnEscape";
 </script>
     
 <div class="relative z-10">
@@ -7,6 +8,7 @@
         class="text-gray-300 hover:text-white group inline-flex items-center text-sm font-medium py-2 focus:outline-none"
         on:click={() => dropdown.set(!$dropdown)}
         on:blur={() => dropdown.set(false)}
+        use:blurOnEscape
     >
         <span>Socials</span>
 
