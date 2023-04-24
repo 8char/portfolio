@@ -7,10 +7,7 @@
 <h2>Create an account</h2>
 <a href="/api/oauth?provider=github" class="button">Continue with Github</a>
 <p class="center">or</p>
-<form
-	method="post"
-	use:enhance
->
+<form method="post" use:enhance>
 	<label for="username">username</label><br />
 	<input id="username" name="username" /><br />
 	<label for="password">password</label><br />

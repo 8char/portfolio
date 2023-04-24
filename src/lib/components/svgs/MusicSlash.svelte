@@ -1,7 +1,7 @@
 <svg
 	class="svg-inline--fa fa-music-slash fa-w-20 fa-sm text-gray-300"
 	aria-hidden="true"
-    style="height:1em;font-size:.875em;vertical-align:-.125em;transform-origin:center;overflow:visible"
+	style="height:1em;font-size:.875em;vertical-align:-.125em;transform-origin:center;overflow:visible"
 	focusable="false"
 	data-prefix="far"
 	data-icon="music-slash"

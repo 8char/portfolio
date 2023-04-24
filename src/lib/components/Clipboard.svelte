@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
+	import { onMount } from 'svelte';
 
 	onMount(() => {
-		const copyBtnElement = document.querySelectorAll('.copy')
+		const copyBtnElement = document.querySelectorAll('.copy');
 
 		function copyToClipboard(event: Event) {
-			const buttonElement = event.currentTarget as HTMLButtonElement
-			const codeTitleElement = buttonElement.parentElement
-			const codeElement = codeTitleElement.nextElementSibling
-			navigator.clipboard.writeText(codeElement.textContent)
+			const buttonElement = event.currentTarget as HTMLButtonElement;
+			const codeTitleElement = buttonElement.parentElement;
+			const codeElement = codeTitleElement.nextElementSibling;
+			navigator.clipboard.writeText(codeElement.textContent);
 		}
 
 		copyBtnElement.forEach((btn) => {
@@ -29,13 +29,10 @@
                     d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
                 />
                 </svg>
-            `
-			btn.addEventListener('click', copyToClipboard)
-		})
+            `;
+			btn.addEventListener('click', copyToClipboard);
+		});
 
-		return () =>
-			copyBtnElement.forEach((btn) =>
-				btn.removeEventListener('click', copyToClipboard)
-			)
-	})
+		return () => copyBtnElement.forEach((btn) => btn.removeEventListener('click', copyToClipboard));
+	});
 </script>

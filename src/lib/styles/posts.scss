@@ -1,9 +1,9 @@
 .prose h1 {
-    @apply mx-16 text-primary-500 text-6xl text-center font-bold drop-shadow-2xl mt-16 mb-6;
+	@apply mx-16 text-primary-500 text-6xl text-center font-bold drop-shadow-2xl mt-16 mb-6;
 }
 
 .prose h2 {
-    @apply text-primary-500 mt-16 mb-6 text-4xl font-bold;
+	@apply text-primary-500 mt-16 mb-6 text-4xl font-bold;
 }
 
 .prose p > a {
@@ -22,7 +22,7 @@
 }
 
 .prose img {
-    @apply rounded-lg shadow-lg;
+	@apply rounded-lg shadow-lg;
 	justify-self: center;
 	grid-column: gutter-start / gutter-end;
 }
@@ -83,7 +83,7 @@
 }
 
 .prose blockquote {
-    @apply p-8 text-white bg-neutral-950/70 border-t-2 border-primary-500 rounded-2xl shadow-lg;
+	@apply p-8 text-white bg-neutral-950/70 border-t-2 border-primary-500 rounded-2xl shadow-lg;
 }
 
 .prose blockquote p {
@@ -96,26 +96,24 @@
 }
 
 table {
-    @apply text-sm text-left text-gray-500 dark:text-gray-400;
-    
-    thead {
-        @apply text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400;
-    }
+	@apply text-sm text-left text-gray-500 dark:text-gray-400;
 
-    th {
-        @apply px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white;
-    }
+	thead {
+		@apply text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400;
+	}
 
-    tr {
-        @apply bg-white border-b dark:bg-gray-800 dark:border-gray-700;
-    }
+	th {
+		@apply px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white;
+	}
 
-    td {
-        @apply px-6 py-4;
-    }
+	tr {
+		@apply bg-white border-b dark:bg-gray-800 dark:border-gray-700;
+	}
+
+	td {
+		@apply px-6 py-4;
+	}
 }
-  
-  
 
 @media (min-width: 860px) {
 	.prose {
@@ -140,5 +138,5 @@ table {
 }
 
 .prose {
-    @apply mx-4;
+	@apply mx-4;
 }

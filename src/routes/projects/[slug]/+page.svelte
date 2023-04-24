@@ -1,13 +1,9 @@
 <script lang="ts">
-	import Clipboard from '$lib/components/Clipboard.svelte'
-	import Overlay from '$lib/components/Overlay.svelte'
-	import {
-		postImage,
-		siteName,
-		siteUrl,
-	} from '$lib/api/config'
+	import Clipboard from '$lib/components/Clipboard.svelte';
+	import Overlay from '$lib/components/Overlay.svelte';
+	import { postImage, siteName, siteUrl } from '$lib/api/config';
 	export let data;
-	let image = `${postImage}${encodeURIComponent(data.frontmatter.title)}.png`
+	let image = `${postImage}${encodeURIComponent(data.frontmatter.title)}.png`;
 </script>
 
 <svelte:head>
