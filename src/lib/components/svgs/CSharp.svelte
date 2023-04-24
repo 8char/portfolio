@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let classes: string;
+	export let classes: string;
 </script>
 
 <svg
@@ -8,7 +8,7 @@
 	xmlns="http://www.w3.org/2000/svg"
 	preserveAspectRatio="xMidYMid"
 	fill="currentColor"
-    class={classes}
+	class={classes}
 >
 	<g>
 		<path

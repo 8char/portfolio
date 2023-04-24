@@ -1,16 +1,7 @@
 module.exports = {
 	root: true,
 	parser: '@typescript-eslint/parser',
-	extends: [
-        'airbnb',
-        'airbnb/hooks',
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'prettier'
-    ],
-    rules: {
-        "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": true}]
-    },
+	extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
 	plugins: ['svelte3', '@typescript-eslint'],
 	ignorePatterns: ['*.cjs'],
 	overrides: [{ files: ['*.svelte'], processor: 'svelte3/svelte3' }],

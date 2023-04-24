@@ -1,0 +1,107 @@
+.prose code[class*='language-'],
+.prose pre[class*='language-'] {
+	@apply text-white;
+	tab-size: 4;
+}
+
+.prose pre {
+	@apply px-8 leading-8 bg-gray-900 border border-t-0 border-primary-500 rounded-b-3xl shadow-sm whitespace-pre-wrap;
+}
+
+.prose pre .code-line {
+	@apply pl-6;
+}
+
+.prose pre .line-number {
+	@apply pl-2;
+}
+
+.prose pre > code {
+	counter-reset: step;
+	counter-increment: step 0;
+}
+
+.prose code:not(pre > code) {
+	@apply px-1 py-2 text-white bg-gray-900 rounded;
+}
+
+.prose kbd,
+.prose code {
+	@apply font-mono;
+}
+
+.prose kbd {
+	@apply p-1 text-white bg-gray-900 border border-primary-500 border-x-2 rounded;
+}
+
+.prose .rehype-code-title {
+	@apply flex justify-between pt-4 pr-6 pb-0 pl-6 text-white bg-gray-900 border border-b-0 border-primary-500 rounded-t-2xl z-10;
+}
+
+.prose .line-number::before {
+	@apply mr-4 px-4 inline-block text-right text-gray-500 w-4;
+	content: counter(step);
+	counter-increment: step;
+}
+
+.prose .highlight-line {
+	@apply block bg-blue-100;
+}
+
+.prose .code-line.inserted {
+	@apply block bg-green-600/20;
+}
+
+.prose .code-line.deleted {
+	@apply block bg-red-600/20;
+}
+
+.prose .token.regex,
+.prose .token.important,
+.prose .token.variable,
+.prose .token.function,
+.prose .token.class-name,
+.prose .language-css .token.rule {
+	@apply text-blue-600;
+}
+
+.prose .token.keyword,
+.prose .language-css .token.variable,
+.prose .language-css .token.selector,
+.prose .language-css .token.pseudo-element {
+	@apply text-blue-400;
+}
+
+.prose .token.tag,
+.prose .token.boolean,
+.prose .token.constant,
+.prose .token.symbol,
+.prose .token.deleted,
+.prose .token.entity,
+.prose .token.url,
+.prose .style .token.string {
+	@apply text-red-500;
+}
+
+.prose .token.operator,
+.prose .token.punctuation,
+.prose .literal-property.property,
+.prose .token.property,
+.prose .token.attr-name,
+.prose .token.string,
+.prose .token.char,
+.prose .token.builtin,
+.prose .token.inserted,
+.prose .language-css .unit,
+.prose .language-css .token.function,
+.prose .token.atrule .token.property,
+.prose .token.atrule .token.rule {
+	@apply text-yellow-500;
+}
+
+.prose .token.comment,
+.prose .token.prolog,
+.prose .token.doctype,
+.prose .token.cdata {
+	@apply text-gray-500;
+}

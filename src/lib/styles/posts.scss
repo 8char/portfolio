@@ -1,0 +1,142 @@
+.prose h1 {
+	@apply mx-16 text-primary-500 text-6xl text-center font-bold drop-shadow-2xl mt-16 mb-6;
+}
+
+.prose h2 {
+	@apply text-primary-500 mt-16 mb-6 text-4xl font-bold;
+}
+
+.prose p > a {
+	@apply underline hover:text-primary-500 transition-colors font-bold;
+	@apply underline-offset-4;
+}
+
+.prose p,
+.prose li {
+	@apply leading-8;
+}
+
+.prose iframe,
+.prose video {
+	grid-column: gutter-start / gutter-end;
+}
+
+.prose img {
+	@apply rounded-lg shadow-lg;
+	justify-self: center;
+	grid-column: gutter-start / gutter-end;
+}
+
+.prose img,
+.prose iframe,
+.prose video,
+.prose p,
+.prose ul,
+.prose ol,
+.prose pre,
+.prose blockquote:not(blockquote > blockquote),
+.prose details {
+	@apply mb-8;
+}
+
+.prose li > ul {
+	margin-bottom: 0;
+}
+
+.prose ul,
+.prose ol {
+	@apply grid;
+	@apply gap-y-2;
+	@apply list-none;
+	@apply list-inside;
+}
+
+.prose li a {
+	@apply font-bold;
+}
+
+.prose ul li::before {
+	content: '👉️';
+	@apply pr-2;
+}
+
+.prose li > ul {
+	margin-top: var(--spacing-8);
+	padding-left: var(--spacing-16);
+}
+
+.prose li > ul > li {
+	list-style-type: circle;
+}
+
+.prose li > ul > li::before {
+	content: none;
+}
+
+.prose ol {
+	list-style-type: decimal;
+}
+
+.prose li > ol {
+	margin-top: var(--spacing-8);
+	padding-left: var(--spacing-16);
+}
+
+.prose blockquote {
+	@apply p-8 text-white bg-neutral-950/70 border-t-2 border-primary-500 rounded-2xl shadow-lg;
+}
+
+.prose blockquote p {
+	@apply mb-0;
+}
+
+.prose details summary {
+	margin-bottom: var(--spacing-8);
+	font-weight: 700;
+}
+
+table {
+	@apply text-sm text-left text-gray-500 dark:text-gray-400;
+
+	thead {
+		@apply text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400;
+	}
+
+	th {
+		@apply px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white;
+	}
+
+	tr {
+		@apply bg-white border-b dark:bg-gray-800 dark:border-gray-700;
+	}
+
+	td {
+		@apply px-6 py-4;
+	}
+}
+
+@media (min-width: 860px) {
+	.prose {
+		display: grid;
+		grid-template-columns:
+			1fr
+			[gutter-start]
+			2rem
+			[content-start] 60rem [content-end]
+			2rem
+			[gutter-end]
+			1fr;
+	}
+
+	.prose > * {
+		grid-column: content-start / content-end;
+	}
+
+	.prose h1 {
+		margin: var(--spacing-128) 0;
+	}
+}
+
+.prose {
+	@apply mx-4;
+}

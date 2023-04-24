@@ -1,8 +1,14 @@
 <script lang="ts">
-    export let classes: string;
+	export let classes: string;
 </script>
 
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 947 947" fill="currentColor" class={classes}>
+<svg
+	version="1.0"
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 947 947"
+	fill="currentColor"
+	class={classes}
+>
 	<g>
 		<path
 			d="M835.5,473.6c0-199.8-162.2-362-362-362s-362,162.2-362,362c0,199.8,162.2,362,362,362   S835.5,673.4,835.5,473.6"

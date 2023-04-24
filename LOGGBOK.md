@@ -32,6 +32,22 @@ Arbetat på landing page sidan, implementera github workflow som "lintar" projek
 
 Arbetade med a fixa till "spotify data store" och generellt sett fixade till lite saker
 
+## 2023-04-18
+
+Arbetade på projekt viewen och api:n för dem så att jag kan implementera en mer komplett lösning senare och error handling
+
+## 2023-04-19
+
+Allmänt arbetat på hemsidan.
+
+## 2023-04-20
+
+Fixat till SCSS:en för uppläggen/projekten
+
+## 2023-04-21
+
+Laggt till en socials dropdown
+
 ## 2023-04-24
 
 Arbetade med CI & förbättringar till ldropdown menyn.
