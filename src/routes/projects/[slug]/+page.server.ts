@@ -14,5 +14,8 @@ export const load = (async ({ params, setHeaders }) => {
 		'Cache-Control': `max-age=0, s-maxage=${maxage}`,
 	})
 
-	return { content, frontmatter }
+	return {
+        content,
+        frontmatter
+    }
 }) satisfies PageServerLoad;
