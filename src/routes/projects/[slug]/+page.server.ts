@@ -1,6 +1,7 @@
 import { getPost } from '$lib/api/posts'
+import type { PageServerLoad } from './$types';
 
-export const load = async ({ params, setHeaders }) => {
+export const load = (async ({ params, setHeaders }) => {
 	const { content, frontmatter } = await getPost(params.slug)
 
 	const day = 60 * 60 * 24 * 1000
@@ -14,4 +15,4 @@ export const load = async ({ params, setHeaders }) => {
 	})
 
 	return { content, frontmatter }
-}
+}) satisfies PageServerLoad;
