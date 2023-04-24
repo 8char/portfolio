@@ -18,8 +18,7 @@
 
 .prose iframe,
 .prose video,
-.prose pre,
-.prose .rehype-code-title {
+.prose pre {
 	grid-column: gutter-start / gutter-end;
 }
 
