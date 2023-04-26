@@ -1,5 +1,5 @@
-import { redirect } from '@sveltejs/kit';
 import { auth, githubAuth } from '$lib/server/lucia';
+import { redirect } from '@sveltejs/kit';
 import type { RequestHandler } from '../$types';
 
 export const GET: RequestHandler = async ({ cookies, url, locals }) => {
@@ -15,7 +15,7 @@ export const GET: RequestHandler = async ({ cookies, url, locals }) => {
 				username: providerUser.login
 			}));
 		const session = await auth.createSession(user.userId);
-		locals.setSession(session);
+		locals.auth.setSession(session);
 	} catch (e) {
 		return new Response(null, {
 			status: 500
