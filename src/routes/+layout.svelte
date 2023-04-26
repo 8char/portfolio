@@ -20,7 +20,7 @@
 		/>
 		<img
 			loading="lazy"
-			alt="Cover Photo"
+			alt="Cover"
 			src={mountainsImage}
 			class="absolute inset-0 w-full object-cover object-center pointer-events-none select-none opacity-60 mask-gradient"
 		/>

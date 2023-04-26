@@ -7,7 +7,7 @@
 		class="flex flex-col rounded-md border-transparent border-2 hover:border-primary-300 transition duration-200 md:flex-row"
 	>
 		<div class="md:w-1/2">
-			<img class="w-full h-full rounded-l-md" src={ProjectImage} alt="Project Image" />
+			<img class="w-full h-full rounded-l-md" src={ProjectImage} alt="Project" />
 		</div>
 
 		<div class="md:w-1/2 bg-gray-800 p-5 rounded-r-md">
