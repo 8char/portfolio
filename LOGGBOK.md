@@ -51,3 +51,7 @@ Laggt till en socials dropdown
 ## 2023-04-24
 
 Arbetade med CI & förbättringar till dropdown menyn.
+
+## 2023-04-27
+
+Arbetat med login & responsivitet
