@@ -1,10 +1,14 @@
-<script>
+<script lang="ts">
 	import '$lib/styles/styles.scss';
+	import { enhance } from '$app/forms';
+	import type { PageData } from './$types';
 
 	import Logo from '$lib/assets/logo-fit.png';
 	import mountainsImage from '$lib/assets/mountains.jpg';
 	import Dropdown from '$lib/components/Dropdown.svelte';
 	import DropdownItem from '$lib/components/DropdownItem.svelte';
+
+	export let data: PageData;
 
 	import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 </script>
@@ -83,11 +87,22 @@
 					</Dropdown>
 				</nav>
 
-				<button
-					class="ring-1 rounded-xl px-3 p-1 text-gray-300 hover:text-white hover:bg-primary-500/10 transition ml-auto"
-				>
-					Log In
-				</button>
+				{#if data.user}
+					<form use:enhance method="post">
+						<input
+							class="ring-1 rounded-xl px-3 p-1 text-gray-300 hover:text-white hover:bg-primary-500/10 transition ml-auto"
+							type="submit"
+							value="Sign out"
+						/>
+					</form>
+				{:else}
+					<a
+						class="ring-1 rounded-xl px-3 p-1 text-gray-300 hover:text-white hover:bg-primary-500/10 transition ml-auto"
+						href="/login"
+					>
+						Log In
+					</a>
+				{/if}
 			</div>
 		</div>
 		{#if false}

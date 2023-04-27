@@ -38,7 +38,7 @@
 			development, so please don't be afraid to reach out!
 		</p>
 
-		<div class="flex space-x-6 mt-5">
+		<div class="flex flex-wrap gap-6 mt-5">
 			{#each skills as skill}
 				<div class="text-gray-400 transition">
 					<span class="sr-only">{skill.name}</span>
