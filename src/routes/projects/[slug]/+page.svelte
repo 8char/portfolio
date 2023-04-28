@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.frontmatter.title}</title>
+	<title>Atlas/8char • {data.frontmatter.title}</title>
 
 	<meta content={data.frontmatter.description} name="description" />
 

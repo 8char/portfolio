@@ -2,7 +2,7 @@ import { GH_TOKEN } from '$env/static/private';
 
 import { markdownToHTML } from './markdown';
 import { postsDataUrl, postsUrl } from './config';
-import type { PostMarkdownType, PostsType, PostType, RateType } from '$lib/types';
+import type { PostMarkdownType, PostsType, PostType, RateType } from './$types';
 import { error } from '@sveltejs/kit';
 
 const headers = {

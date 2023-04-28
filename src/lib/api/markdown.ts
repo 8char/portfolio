@@ -1,3 +1,4 @@
+import type { FrontMatterType } from './$types';
 import { unified } from 'unified';
 import fromMarkdown from 'remark-parse';
 import fromMarkdownToHtml from 'remark-rehype';
@@ -16,7 +17,6 @@ import rehypeCodeTitles from 'rehype-code-titles';
 import { rehypeCopyCode, rehypeUnwrapImages } from './plugins';
 
 import { imagesUrl } from './config';
-import type { FrontMatterType } from '$lib/types';
 
 type ContentType = {
 	content: string;
