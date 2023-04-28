@@ -5,7 +5,7 @@
 <div class="mx-2">
 	<div class="md:max-w-5xl md:mx-auto py-8 space-y-10">
 		<div
-			class="flex flex-col rounded-md border-transparent border-2 hover:border-primary-300 transition duration-200 md:flex-row"
+			class="flex flex-col rounded-lg border-transparent border-2 hover:border-primary-500 transition duration-200 md:flex-row"
 		>
 			<div class="md:w-1/2">
 				<img
