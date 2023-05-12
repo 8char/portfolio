@@ -16,7 +16,7 @@
 		class="max-w-5xl mx-auto px-4 flex items-center py-5 justify-between rounded-xl ring-1 ring-primary-500/50 backdrop-blur-xl bg-gray-900/30 shadow-xl gap-8 md:p-6"
 	>
 		<a href="/">
-			<img src={Logo} alt="Atlas's Logo" class="h-6 w-3" />
+			<img src={Logo} alt="Atlas's Logo" class="h-6" width="20" height="24" />
 		</a>
 		<div class="md:hidden">
 			<button
