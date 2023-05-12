@@ -7,7 +7,6 @@
 		class="absolute z-10 top-0 left-0 h-28 w-full bg-gradient-to-b from-black/50 to-transparent"
 	/>
 	<img
-		loading="lazy"
 		alt="Cover"
 		src={mountainsImage}
 		class="absolute inset-0 w-full object-cover object-center pointer-events-none select-none opacity-60 mask-gradient"
