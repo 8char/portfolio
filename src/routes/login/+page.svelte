@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+	import { faGithub } from '@fortawesome/free-brands-svg-icons';
 	export let form: { message?: string };
 	import FontAwesomeIcon from 'svelte-fa';
 </script>
@@ -10,16 +10,32 @@
 >
 	<h2 class="text-2xl">Sign in</h2>
 	<a href="/api/oauth?provider=github" class="bg-gray-900 p-2 w-full rounded-md flex items-center">
-		<FontAwesomeIcon icon={faGithub} size="lg" class="mr-3 text-gray-400 group-hover:text-gray-300" />
+		<FontAwesomeIcon
+			icon={faGithub}
+			size="lg"
+			class="mr-3 text-gray-400 group-hover:text-gray-300"
+		/>
 		<span class="mx-auto">Continue with Github</span>
 	</a>
 	<p class="center">━ or ━</p>
 	<form method="post" class="flex flex-col gap-2" use:enhance>
 		<label for="username" class="font-bold">USERNAME</label>
-		<input id="username" name="username" class="rounded-xl ring-1 hover:ring-lime-500/50 bg-gray-800 p-1" />
+		<input
+			id="username"
+			name="username"
+			class="rounded-xl ring-1 hover:ring-lime-500/50 bg-gray-800 p-1"
+		/>
 		<label for="password">PASSWORD</label>
-		<input type="password" name="password" class="rounded-xl ring-1 hover:ring-lime-500/50 bg-gray-800 p-1" />
-		<input type="submit" value="Continue" class="ring-1 hover:ring-lime-500/50 rounded-xl bg-gray-900/40 hover:bg-lime-500/40 backdrop-blur-xl p-1 transition duration-300" />
+		<input
+			type="password"
+			name="password"
+			class="rounded-xl ring-1 hover:ring-lime-500/50 bg-gray-800 p-1"
+		/>
+		<input
+			type="submit"
+			value="Continue"
+			class="ring-1 hover:ring-lime-500/50 rounded-xl bg-gray-900/40 hover:bg-lime-500/40 backdrop-blur-xl p-1 transition duration-300"
+		/>
 	</form>
 	{#if form?.message}
 		<p class="error">{form.message || ''}</p>
