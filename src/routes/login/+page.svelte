@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="rounded-lg bg-gray-900/40 backdrop-blur-xl ring-1 hover:bg-gray-800/50 transition shadow-xl flex flex-col items-center w-fit p-6 text-white mx-auto"
+	class="rounded-lg bg-gray-900/40 backdrop-blur-xl ring-1 hover:bg-gray-800/50 transition shadow-xl flex flex-col gap-2 items-center w-fit p-6 text-white mx-auto"
 >
 	<h2 class="text-2xl">Sign in</h2>
 	<a href="/api/oauth?provider=github" class="bg-gray-900 p-2 w-full rounded-md flex items-center">
