@@ -17,7 +17,7 @@
 		/>
 		<span class="mx-auto">Continue with Github</span>
 	</a>
-	<p class="center">━ or ━</p>
+	<p class="center italic">━ or ━</p>
 	<form method="post" class="flex flex-col gap-2" use:enhance>
 		<label for="username">USERNAME</label>
 		<input
