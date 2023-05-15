@@ -19,7 +19,7 @@
 	</a>
 	<p class="center">━ or ━</p>
 	<form method="post" class="flex flex-col gap-2" use:enhance>
-		<label for="username" class="font-bold">USERNAME</label>
+		<label for="username">USERNAME</label>
 		<input
 			id="username"
 			name="username"
