@@ -22,4 +22,5 @@
 	<div class="relative mt-6">
 		<slot />
 	</div>
+	<a href="/snake" class="fixed bottom-0 right-0 rotate-315">&#128013;</a>
 </div>
