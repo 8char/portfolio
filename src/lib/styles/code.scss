@@ -45,64 +45,64 @@
 }
 
 .prose .highlight-line {
-    @apply block bg-blue-100;
+	@apply block bg-blue-100;
 }
-    
+
 .prose .code-line.inserted {
-    @apply block bg-green-600/20;
+	@apply block bg-green-600/20;
 }
-    
+
 .prose .code-line.deleted {
-    @apply block bg-red-600/20;
+	@apply block bg-red-600/20;
 }
-    
+
 /* Keywords and selectors */
 .prose .token.keyword,
 .prose .token.selector {
-    @apply text-blue-400;
+	@apply text-blue-400;
 }
-    
+
 /* Constants and numeric literals */
 .prose .token.constant,
 .prose .token.number {
-    @apply text-orange-500;
+	@apply text-orange-500;
 }
-    
+
 /* Strings and URLs */
 .prose .token.string,
 .prose .token.url,
 .prose .style .token.string {
-    @apply text-green-500;
+	@apply text-green-500;
 }
-    
+
 /* Operators and punctuation */
 .prose .token.operator,
 .prose .token.punctuation {
-    @apply text-blue-600;
+	@apply text-blue-600;
 }
-    
+
 /* Function and method names */
 .prose .token.function,
 .prose .token.method {
-    @apply text-blue-500;
+	@apply text-blue-500;
 }
-    
+
 /* Class names */
 .prose .token.class-name {
-    @apply text-teal-500;
+	@apply text-teal-500;
 }
-    
+
 /* Variables and parameters */
 .prose .token.variable,
 .prose .token.parameter {
-    @apply text-pink-500;
+	@apply text-pink-500;
 }
-    
+
 /* Comments and meta information */
 .prose .token.comment,
 .prose .token.prolog,
 .prose .token.doctype,
 .prose .token.cdata,
 .prose .language-css .token.rule {
-    @apply text-gray-500;
+	@apply text-gray-500;
 }

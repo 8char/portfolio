@@ -4,6 +4,9 @@
 
 	import NavBar from '$lib/components/NavBar.svelte';
 	import Background from '$lib/components/Background.svelte';
+	import { headerClickCounter } from '$lib/stores/headerClickCounter';
+
+	import { fly } from 'svelte/transition';
 
 	export let data: PageData;
 </script>
@@ -19,8 +22,12 @@
 <div class="min-h-screen bg-gray-900">
 	<Background />
 	<NavBar user={data.user} />
-	<div class="relative mt-6">
+	<main class="relative mt-6">
 		<slot />
-	</div>
-	<a href="/snake" class="fixed bottom-0 right-0 rotate-315">&#128013;</a>
+	</main>
+	{#if $headerClickCounter >= 5}
+		<a href="/snake" class="fixed bottom-0 right-0" transition:fly={{ y: 200, duration: 2000 }}
+			>&#128013;</a
+		>
+	{/if}
 </div>

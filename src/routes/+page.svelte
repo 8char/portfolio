@@ -2,11 +2,15 @@
 	import Skribbl from '$lib/components/svgs/Skribbl.svelte';
 	import SpotifyPresence from '$lib/components/SpotifyPresence.svelte';
 	import SkillsRow from '$lib/components/SkillsRow.svelte';
+	import { headerClickCounter } from '$lib/stores/headerClickCounter';
 </script>
 
 <div class="h-full max-w-5xl mx-auto px-4 py-4 md:px-0">
 	<div class="max-w-2xl py-16 md:py-8 sm:py-40 md:mx-auto">
-		<h2 class="text-4xl w-min font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
+		<h2
+			class="text-4xl w-min font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl select-none"
+			on:click={() => headerClickCounter.update((i) => i + 1)}
+		>
 			Atlas
 			<Skribbl />
 		</h2>

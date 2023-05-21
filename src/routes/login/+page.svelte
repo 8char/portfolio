@@ -34,11 +34,11 @@
 		<input
 			type="submit"
 			value="Continue"
-			class="ring-1 hover:ring-secondary-500/50 rounded-xl bg-gray-900/40 hover:bg-secondary-500/40 backdrop-blur-xl p-1 transition duration-300"
+			class="ring-1 hover:ring-secondary-500/50 rounded-xl bg-gray-900/40 hover:bg-secondary-900/40 backdrop-blur-xl p-1 transition duration-300 mt-2"
 		/>
 	</form>
 	{#if form?.message}
 		<p class="error">{form.message || ''}</p>
 	{/if}
-	<a href="/signup" class="italic">Create a new account</a>
+	<a href="/signup" class="italic hover:underline">Create a new account</a>
 </div>

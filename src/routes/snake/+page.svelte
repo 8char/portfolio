@@ -1,19 +1,19 @@
 <script lang="ts">
 	import { onMount } from 'svelte/internal';
 
-    const X_COORDINATE = 0;
-    const Y_COORDINATE = 1;
-    const TICK_DELAY = 200;
+	const X_COORDINATE = 0;
+	const Y_COORDINATE = 1;
+	const TICK_DELAY = 200;
 	const GRID_SIZE = 20;
 	const SNAKE_HEAD = 0;
-    const FOOD_PER_EAT = 2;
+	const FOOD_PER_EAT = 2;
 
-    type VectorForce = 1 | 0 | -1
-    type TwoDimensionalVector = [VectorForce, VectorForce]
-    type TwoDimensionalCoordinate = [number, number]
-    type OneDimensionalCoordinate = number
+	type VectorForce = 1 | 0 | -1;
+	type TwoDimensionalVector = [VectorForce, VectorForce];
+	type TwoDimensionalCoordinate = [number, number];
+	type OneDimensionalCoordinate = number;
 	type Cell = 'empty' | 'snake' | 'food';
-    type CellGrid = Cell[][]
+	type CellGrid = Cell[][];
 
 	let lost = false;
 	let grid: CellGrid = [...Array(GRID_SIZE)].map(() => [...Array(GRID_SIZE)].map(() => 'empty'));
@@ -26,7 +26,9 @@
 	}
 
 	function spawnFood() {
-        [...Array(FOOD_PER_EAT)].forEach(() => grid[getRandomInt(GRID_SIZE)][getRandomInt(GRID_SIZE)] = 'food')
+		[...Array(FOOD_PER_EAT)].forEach(
+			() => (grid[getRandomInt(GRID_SIZE)][getRandomInt(GRID_SIZE)] = 'food')
+		);
 	}
 
 	spawnFood();
@@ -54,9 +56,9 @@
 			}
 
 			if (
-                isOutOfBounds(futureSnakeHead[X_COORDINATE])
-                || isOutOfBounds(futureSnakeHead[Y_COORDINATE])
-            ) {
+				isOutOfBounds(futureSnakeHead[X_COORDINATE]) ||
+				isOutOfBounds(futureSnakeHead[Y_COORDINATE])
+			) {
 				lost = true;
 				return;
 			}
@@ -69,8 +71,13 @@
 
 			const snakeBody = snakePosition.slice(0, snakePosition.length - (ateFood ? 0 : 1));
 
-			if (snakeBody.some((x) => x[X_COORDINATE] === futureSnakeHead[X_COORDINATE]
-                && x[Y_COORDINATE] === futureSnakeHead[Y_COORDINATE])) {
+			if (
+				snakeBody.some(
+					(x) =>
+						x[X_COORDINATE] === futureSnakeHead[X_COORDINATE] &&
+						x[Y_COORDINATE] === futureSnakeHead[Y_COORDINATE]
+				)
+			) {
 				lost = true;
 				return;
 			}
@@ -122,22 +129,20 @@
 		<h3 class="text-center">Hit <code class="kbd">ENTER</code> to restart</h3>
 	{/if}
 	<h3 class="text-center">snake length {snakePosition.length}</h3>
-    <div class="mx-auto">
-        <div class="flex flex-col justify-center align-center gap-px w-fit">
-            {#each gridWithSnake as row, i}
-                <div class="flex gap-px">
-                    {#each row as cell, k}
-                        <div on:click={
-                            () => grid[i][k] = 'food'
-                        } class={`w-6 h-6 ${cell}`} />
-                    {/each}
-                </div>
-            {/each}
-        </div>
-    </div>
+	<div class="mx-auto">
+		<div class="flex flex-col justify-center align-center gap-px w-fit">
+			{#each gridWithSnake as row, i}
+				<div class="flex gap-px">
+					{#each row as cell, k}
+						<div on:click={() => (grid[i][k] = 'food')} class={`w-6 h-6 ${cell}`} />
+					{/each}
+				</div>
+			{/each}
+		</div>
+	</div>
 
 	{#if lost}
-        <button on:click={restart}> Start again </button>
+		<button on:click={restart}> Start again </button>
 	{/if}
 </main>
 
