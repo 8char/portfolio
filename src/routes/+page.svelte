@@ -22,10 +22,10 @@
 		</h2>
 
 		<p class="mt-8 text-lg text-gray-300">
-			My name is Matteo Krans Dusic aka Atlas. I'm currently studying advanced
-            Web Development, and i take it very seriously! I have been programming
-            websites, games & miscellaneous things for well over 5 years. I'm a freelance
-            developer who specializes in web development, so please don't be afraid to reach out!
+			My name is Matteo Krans Dusic aka Atlas. I'm currently studying advanced Web Development, and
+			i take it very seriously! I have been programming websites, games & miscellaneous things for
+			well over 5 years. I'm a freelance developer who specializes in web development, so please
+			don't be afraid to reach out!
 		</p>
 
 		<SkillsRow />
