@@ -5,6 +5,7 @@
 	import TypeScriptLogo from '$lib/components/svgs/TypeScript.svelte';
 	import SvelteLogo from '$lib/components/svgs/Svelte.svelte';
 	import NodeJS from '$lib/components/svgs/NodeJS.svelte';
+	import BoopAction from './BoopAction.svelte';
 
 	type SkillName = string;
 
@@ -27,10 +28,12 @@
 		<div class="text-gray-400 transition">
 			<span class="sr-only">{skill.name}</span>
 
-			<svelte:component
-				this={skill.icon}
-				classes="w-8 h-8 hover:text-primary-500 fill-current transition"
-			/>
+			<BoopAction animationType="wiggle">
+				<svelte:component
+					this={skill.icon}
+					classes="w-8 h-8 hover:text-primary-500 fill-current transition"
+				/>
+			</BoopAction>
 		</div>
 	{/each}
 </div>

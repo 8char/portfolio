@@ -1,11 +1,17 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
+	let ready = false;
+	onMount(() => (ready = true));
+
 	import Skribbl from '$lib/components/svgs/Skribbl.svelte';
 	import SpotifyPresence from '$lib/components/SpotifyPresence.svelte';
 	import SkillsRow from '$lib/components/SkillsRow.svelte';
 	import { headerClickCounter } from '$lib/stores/headerClickCounter';
+	import { fade } from 'svelte/transition';
 </script>
 
-<div class="h-full max-w-5xl mx-auto px-4 py-4 md:px-0">
+<div class="h-full max-w-5xl mx-auto px-4 py-4 md:px-0" in:fade>
 	<div class="max-w-2xl py-16 md:py-8 sm:py-40 md:mx-auto">
 		<h2
 			class="text-4xl w-min font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl select-none"

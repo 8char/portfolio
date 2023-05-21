@@ -1,7 +1,13 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
+	let ready = false;
+	onMount(() => (ready = true));
+
 	import Clipboard from '$lib/components/Clipboard.svelte';
 	import Overlay from '$lib/components/Overlay.svelte';
 	import { postImage, siteName, siteUrl } from '$lib/api/config';
+	import { fade } from 'svelte/transition';
 	export let data;
 	let image = `${postImage}${encodeURIComponent(data.frontmatter.title)}.png`;
 </script>
@@ -25,10 +31,12 @@
 
 <Clipboard />
 
-<main>
-	<Overlay />
+{#if ready}
+	<article in:fade>
+		<Overlay />
 
-	<div class="prose text-white">
-		{@html data.content}
-	</div>
-</main>
+		<div class="prose text-white">
+			{@html data.content}
+		</div>
+	</article>
+{/if}
