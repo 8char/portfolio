@@ -146,7 +146,7 @@
 		@apply bg-gray-900/50 backdrop-blur-xl rounded-md;
 	}
 	.food {
-		@apply bg-lime-500/50 backdrop-blur-xl rounded-md;
+		@apply bg-secondary-500/50 backdrop-blur-xl rounded-md;
 	}
 	.snake {
 		@apply bg-primary-500/50 backdrop-blur-xl rounded-md;

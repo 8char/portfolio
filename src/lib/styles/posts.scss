@@ -40,7 +40,7 @@
 }
 
 .prose li > ul {
-	margin-bottom: 0;
+	@apply mb-0;
 }
 
 .prose ul,
@@ -56,13 +56,12 @@
 }
 
 .prose ul li::before {
-	content: '👉️';
+	content: '🔥';
 	@apply pr-2;
 }
 
 .prose li > ul {
-	margin-top: var(--spacing-8);
-	padding-left: var(--spacing-16);
+    @apply mt-2 ml-4;
 }
 
 .prose li > ul > li {
@@ -77,11 +76,8 @@
 	list-style-type: decimal;
 }
 
-
-// TODO: FIX THIS DAMN
 .prose li > ol {
-	margin-top: var(--spacing-8);
-	padding-left: var(--spacing-16);
+    @apply mt-2 pl-4;
 }
 
 .prose blockquote {
@@ -93,8 +89,7 @@
 }
 
 .prose details summary {
-	margin-bottom: var(--spacing-8);
-	font-weight: 700;
+	@apply mb-2 font-bold;
 }
 
 table {
@@ -135,7 +130,7 @@ table {
 	}
 
 	.prose h1 {
-		margin: var(--spacing-128) 0;
+        @apply my-32 mx-0;
 	}
 }
 

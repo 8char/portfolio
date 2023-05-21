@@ -23,18 +23,18 @@
 		<input
 			id="username"
 			name="username"
-			class="rounded-xl ring-1 hover:ring-lime-500/50 bg-gray-800 p-1"
+			class="rounded-xl ring-1 hover:ring-secondary-500/50 bg-gray-800 p-1"
 		/>
 		<label for="password">PASSWORD</label>
 		<input
 			type="password"
 			name="password"
-			class="rounded-xl ring-1 hover:ring-lime-500/50 bg-gray-800 p-1"
+			class="rounded-xl ring-1 hover:ring-secondary-500/50 bg-gray-800 p-1"
 		/>
 		<input
 			type="submit"
 			value="Continue"
-			class="ring-1 hover:ring-lime-500/50 rounded-xl bg-gray-900/40 hover:bg-lime-500/40 backdrop-blur-xl p-1 transition duration-300"
+			class="ring-1 hover:ring-secondary-500/50 rounded-xl bg-gray-900/40 hover:bg-secondary-500/40 backdrop-blur-xl p-1 transition duration-300"
 		/>
 	</form>
 	{#if form?.message}

@@ -8,7 +8,7 @@
 </script>
 
 <div
-	class="relative mt-8 rounded-lg bg-gray-900/40 backdrop-blur-xl ring-1 hover:bg-gray-800/50 hover:ring-lime-500/50 transition group px-6 py-5 shadow-xl flex items-center space-x-3 max-w-lg"
+	class="relative mt-8 rounded-lg bg-gray-900/40 backdrop-blur-xl ring-1 hover:bg-gray-800/50 hover:ring-secondary-500/50 transition group px-6 py-5 shadow-xl flex items-center space-x-3 max-w-lg"
 >
 	<div class="flex-shrink-0">
 		{#if $data === null}
@@ -30,7 +30,7 @@
 		{:else}
 			<a
 				href={$data ? `https://open.spotify.com/track/${$data.track_id}` : '#'}
-				class="focus:outline-none hover:bg-lime-500"
+				class="focus:outline-none hover:bg-secondary-500"
 			>
 				<span class="absolute inset-0" aria-hidden="true" />
 

@@ -1,4 +1,4 @@
-import { neutral, blue } from 'tailwindcss/colors';
+import { neutral, blue, orange } from 'tailwindcss/colors';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -7,6 +7,7 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: blue,
+				secondary: orange,
 				gray: neutral
 			}
 		},
