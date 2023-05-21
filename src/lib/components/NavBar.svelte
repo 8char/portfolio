@@ -7,8 +7,10 @@
 	import LoginButton from '$lib/components/LoginButton.svelte';
 
 	import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+	import { writable } from 'svelte/store';
 
 	export let user: User;
+	const navMenuOpen = writable<boolean>(false);
 </script>
 
 <nav class="sticky top-2 z-50 text-center mx-2">
@@ -23,6 +25,7 @@
 				type="button"
 				class="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 focus:outline-none"
 				aria-expanded="false"
+				on:click={() => navMenuOpen.update((open) => !open)}
 			>
 				<span class="sr-only">Open menu</span>
 				<svg
@@ -70,7 +73,7 @@
 		</div>
 	</div>
 
-	{#if false}
+	{#if $navMenuOpen}
 		<div class="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
 			<div class="rounded-lg bg-gray-800 p-5 space-y-5">
 				<div class="sm:pb-8">
@@ -97,15 +100,10 @@
 				</div>
 				<div>
 					<div class="grid grid-cols-2 gap-4">
-						<router-link to="/" class="text-base font-medium text-gray-100 hover:text-gray-300">
-							Home
-						</router-link>
-						<router-link
-							to="/projects"
-							class="text-base font-medium text-gray-100 hover:text-gray-300"
-						>
+						<a href="/" class="text-base font-medium text-gray-100 hover:text-gray-300"> Home </a>
+						<a href="/projects" class="text-base font-medium text-gray-100 hover:text-gray-300">
 							Projects
-						</router-link>
+						</a>
 					</div>
 
 					<div class="mt-3 space-x-5">
