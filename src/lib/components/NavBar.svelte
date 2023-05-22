@@ -5,9 +5,11 @@
 	import Dropdown from '$lib/components/Dropdown.svelte';
 	import DropdownItem from '$lib/components/DropdownItem.svelte';
 	import LoginButton from '$lib/components/LoginButton.svelte';
+	import FontAwesomeIcon from 'svelte-fa';
 
 	import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 	import { writable } from 'svelte/store';
+	import { fade } from 'svelte/transition';
 
 	export let user: User;
 	const navMenuOpen = writable<boolean>(false);
@@ -24,8 +26,8 @@
 			<button
 				type="button"
 				class="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 focus:outline-none"
-				aria-expanded="false"
-				on:click={() => navMenuOpen.update((open) => !open)}
+				aria-expanded={$navMenuOpen}
+				on:click={() => navMenuOpen.update((open) => true)}
 			>
 				<span class="sr-only">Open menu</span>
 				<svg
@@ -74,53 +76,62 @@
 	</div>
 
 	{#if $navMenuOpen}
-		<div class="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+		<div
+			class="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+			transition:fade={{ duration: 200 }}
+		>
 			<div class="rounded-lg bg-gray-800 p-5 space-y-5">
-				<div class="sm:pb-8">
-					<div class="flex items-center justify-end">
-						<button
-							type="button"
-							class="bg-gray-700 rounded-md p-2 inline-flex items-center justify-center text-gray-400 focus:outline-non"
+				<div class="flex items-center justify-end">
+					<button
+						type="button"
+						class="bg-gray-700 rounded-md p-2 inline-flex items-center justify-center text-gray-400 focus:outline-non"
+						on:click={() => navMenuOpen.update((open) => false)}
+					>
+						<span class="sr-only">Close menu</span>
+						<!-- Heroicon name: outline/x -->
+						<svg
+							class="h-6 w-6"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="2"
+							stroke="currentColor"
+							aria-hidden="true"
 						>
-							<span class="sr-only">Close menu</span>
-							<!-- Heroicon name: outline/x -->
-							<svg
-								class="h-6 w-6"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="2"
-								stroke="currentColor"
-								aria-hidden="true"
-							>
-								<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-							</svg>
-						</button>
-					</div>
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
 				</div>
 				<div>
-					<div class="grid grid-cols-2 gap-4">
+					<div class="grid grid-cols-2 grid-rows-2 gap-4 items-center content-center">
 						<a href="/" class="text-base font-medium text-gray-100 hover:text-gray-300"> Home </a>
 						<a href="/projects" class="text-base font-medium text-gray-100 hover:text-gray-300">
 							Projects
 						</a>
-					</div>
-
-					<div class="mt-3 space-x-5">
-						<a href="https://github.com/8char" target="_blank">
-							<font-awesome-icon
+						<a
+							href="https://github.com/8char"
+							class="text-base font-medium text-gray-100 hover:text-gray-300 flex gap-2 mx-auto"
+							target="_blank"
+						>
+							<FontAwesomeIcon
 								size="lg"
-								:icon="faGithub"
+								icon={faGithub}
 								class="text-gray-400 hover:text-gray-300"
 							/>
+							GitHub
 						</a>
 
-						<a href="https://linkedin.com/in/matteo-krans-dusic-337ba31b6/" target="_blank">
-							<font-awesome-icon
+						<a
+							href="https://linkedin.com/in/matteo-krans-dusic-337ba31b6/"
+							class="text-base font-medium text-gray-100 hover:text-gray-300 flex gap-2 mx-auto"
+							target="_blank"
+						>
+							<FontAwesomeIcon
 								size="lg"
-								:icon="faLinkedIn"
+								icon={faLinkedin}
 								class="text-gray-400 hover:text-gray-300"
 							/>
+							Linked In
 						</a>
 					</div>
 				</div>
