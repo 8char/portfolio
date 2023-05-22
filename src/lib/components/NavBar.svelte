@@ -71,7 +71,7 @@
 				</Dropdown>
 			</nav>
 
-			<LoginButton {user} />
+			<LoginButton {user} standalone={false} />
 		</div>
 	</div>
 
@@ -81,14 +81,14 @@
 			transition:fade={{ duration: 200 }}
 		>
 			<div class="rounded-lg bg-gray-800 p-5 space-y-5">
-				<div class="flex items-center justify-end">
+				<div class="flex items-center justify-between">
+					<LoginButton {user} standalone={true} />
 					<button
 						type="button"
 						class="bg-gray-700 rounded-md p-2 inline-flex items-center justify-center text-gray-400 focus:outline-non"
 						on:click={() => navMenuOpen.update((open) => false)}
 					>
 						<span class="sr-only">Close menu</span>
-						<!-- Heroicon name: outline/x -->
 						<svg
 							class="h-6 w-6"
 							xmlns="http://www.w3.org/2000/svg"
