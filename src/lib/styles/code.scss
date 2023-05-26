@@ -5,7 +5,7 @@
 }
 
 .prose pre {
-	@apply px-8 leading-8 bg-gray-900 border border-t-0 border-primary-500 rounded-b-3xl shadow-sm whitespace-pre-wrap;
+	@apply px-8 leading-8 bg-gray-900 border border-t-0 border-primary-500 rounded-b-3xl shadow-sm whitespace-pre-wrap overflow-hidden;
 }
 
 .prose pre .code-line {
@@ -22,7 +22,7 @@
 }
 
 .prose code:not(pre > code) {
-	@apply px-1 py-2 text-white bg-gray-900 rounded;
+	@apply px-1 py-2 text-white bg-gray-950 rounded;
 }
 
 .prose kbd,
