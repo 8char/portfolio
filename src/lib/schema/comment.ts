@@ -1,5 +1,5 @@
-import z from 'zod'
+import z from 'zod';
 
 export const commentSchema = z.object({
-    content: z.string().nonempty().max(255).trim()
-})
+	content: z.string().nonempty().max(255).trim()
+});
