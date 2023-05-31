@@ -45,7 +45,9 @@
 		"@prisma/client": "^4.13.0",
 		"@sveltejs/adapter-vercel": "^2.4.2",
 		"@types/hast": "^2.3.4",
+		"atropos": "^1.0.2",
 		"autoprefixer": "^10.4.14",
+		"date-fns": "^2.30.0",
 		"dotenv": "^16.0.3",
 		"front-matter": "^4.0.2",
 		"gray-matter": "^4.0.3",
@@ -72,6 +74,7 @@
 		"timers": "^0.1.1",
 		"unified": "^10.1.2",
 		"unist-util-visit": "^4.1.2",
-		"ws": "^8.13.0"
+		"ws": "^8.13.0",
+		"zod": "^3.21.4"
 	}
 }

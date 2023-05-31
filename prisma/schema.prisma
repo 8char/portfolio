@@ -15,6 +15,7 @@ model AuthUser {
   username     String        @unique
   auth_session AuthSession[]
   auth_key     AuthKey[]
+  Comment      Comment[]
 
   @@map("auth_user")
 }
@@ -40,4 +41,16 @@ model AuthKey {
 
   @@index([user_id])
   @@map("auth_key")
+}
+
+model Comment {
+  id        String   @id @unique @default(cuid())
+  content   String
+  user_id   String
+  post_id   String
+  timestamp DateTime  @default(now())
+  auth_user AuthUser @relation(references: [id], fields: [user_id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@map("comment")
 }

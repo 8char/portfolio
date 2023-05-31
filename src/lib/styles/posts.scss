@@ -27,7 +27,7 @@
 	grid-column: gutter-start / gutter-end;
 }
 
-.prose img,
+.prose img:not(.avatar),
 .prose iframe,
 .prose video,
 .prose p,

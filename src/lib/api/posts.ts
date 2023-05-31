@@ -146,8 +146,6 @@ export async function getPost(slug: string): Promise<PostMarkdownType> {
 	});
 
 	if (!response.ok) {
-		console.log(response);
-
 		throw error(404, {
 			message: `Could not find post: ${slug}`
 		});
