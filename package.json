@@ -10,7 +10,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"prepare": "husky install && npx prisma generate && npx prisma migrate dev --name init"
+		"prepare": "husky install && npx prisma generate"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.1",
