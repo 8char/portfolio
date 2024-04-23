@@ -6,6 +6,7 @@
 
 	import Clipboard from '$lib/components/Clipboard.svelte';
 	import Overlay from '$lib/components/Overlay.svelte';
+	import Giscus from '@giscus/svelte';
 	import { postImage, siteName, siteUrl } from '$lib/api/config';
 	import { fade } from 'svelte/transition';
 	import { enhance } from '$app/forms';
@@ -62,49 +63,20 @@
 				</div>
 			{/if}
 
-			<div class="comments">
-				<div class="flex flex-col gap-2 mt-2 mb-4">
-					{#if data.comments.length != 0}
-						{#each data.comments as comment}
-							<div
-								class="ring-1 hover:ring-secondary-500/50 rounded-xl bg-gray-900/40 backdrop-blur-xl transition duration-300 mt-2 p-4"
-								transition:fade
-							>
-								<div class="flex items-center gap-2 mb-2">
-									<img src="https://i.imgur.com/uG8Cz5Y.png" alt="Profile" class="avatar w-10" />
-									<div class="flex flex-col">
-										<span class="font-bold">{comment.auth_user.username}</span>
-										<div class="flex gap-1 items-center">
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												class="inline h-4 w-4"
-												fill="none"
-												viewBox="0 0 24 24"
-												stroke="currentColor"
-											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-												/>
-											</svg>
-											<span>
-												{formatDistanceToNow(new Date(comment.timestamp), {
-													addSuffix: true
-												})}
-											</span>
-										</div>
-									</div>
-								</div>
-								<span>{comment.content}</span>
-							</div>
-						{/each}
-					{:else}
-						<span>There are no comments... Be the first to comment!</span>
-					{/if}
-				</div>
-			</div>
+			<Giscus
+				id="comments"
+				repo="8char/portfolio"
+				repoId="R_kgDOJL6Ftw"
+				category="Announcements"
+				categoryId="DIC_kwDOJL6Ft84Ce4SV"
+				term="idk lol"
+				mapping="pathname"
+				strict="0"
+				inputPosition="top"
+				theme="noborder_dark"
+				lang="en"
+				loading="lazy"
+			/>
 		</div>
 	</article>
 {/if}

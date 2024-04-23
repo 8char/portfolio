@@ -39,6 +39,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fortawesome/free-brands-svg-icons": "^6.4.0",
+		"@giscus/svelte": "^3.0.0",
 		"@lucia-auth/adapter-prisma": "latest",
 		"@lucia-auth/oauth": "latest",
 		"@poppanator/sveltekit-svg": "^3.0.0",
